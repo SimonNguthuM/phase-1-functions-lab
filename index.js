@@ -24,13 +24,7 @@ function distanceTravelledInFeet(start, fin) {
     return distanceTravelled;
 }
 function calculatesFarePrice(start, fin) {
-    let distanceTravelledF;
-    if (start > fin){
-        distanceTravelledF = (start - fin) * 264;
-    }
-    if (fin > start){
-        distanceTravelledF = (fin - start) * 264;
-    }
+    const distanceTravelledF = distanceTravelledInFeet(start, fin)
     let fare;
     if (distanceTravelledF <= 400){
         fare = 0;
